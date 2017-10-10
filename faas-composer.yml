@@ -1,0 +1,14 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+
+functions:
+  composer_update:
+    lang: Dockerfile
+    image: functions/faas-composer
+    handler: .
+    fprocess:	"bash ./entry.sh"
+    environment:
+      read_timeout: 300
+      write_timeout: 10
+      exec_timeout: 300
