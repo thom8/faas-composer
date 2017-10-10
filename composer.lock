@@ -1,0 +1,45 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8f4f36296af6371f441358297d956617",
+    "packages": [
+        {
+            "name": "thom8/faas-composer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thom8/faas-composer.git",
+                "reference": "ce591a36d08ef15028f3d0e2cafd399e03f7edb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thom8/faas-composer/zipball/ce591a36d08ef15028f3d0e2cafd399e03f7edb8",
+                "reference": "ce591a36d08ef15028f3d0e2cafd399e03f7edb8",
+                "shasum": ""
+            },
+            "type": "project",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Thom Toogood",
+                    "email": "thomtoogood@gmail.com"
+                }
+            ],
+            "description": "Run composer update in openfaas",
+            "time": "2017-10-10T13:13:56+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "thom8/faas-composer": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

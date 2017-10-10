@@ -1,0 +1,15 @@
+{
+    "name": "thom8/faas-composer-test",
+    "description": "Run composer update in openfaas",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Thom Toogood",
+            "email": "thomtoogood@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "thom8/faas-composer": "dev-master"
+    }
+}
