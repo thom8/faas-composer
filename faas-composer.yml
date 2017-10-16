@@ -3,12 +3,65 @@ provider:
   gateway: http://localhost:8080
 
 functions:
-  composer_update:
+
+  about:
     lang: Dockerfile
-    image: functions/faas-composer
     handler: .
-    fprocess:	"bash ./entry.sh"
+    image: 8thom/faas-composer
+    fprocess: "composer about"
+
+  diagnose:
+    lang: Dockerfile
+    handler: .
+    image: 8thom/faas-composer
+    fprocess: "composer diagnose"
+
+  licenses:
+    lang: Dockerfile
+    handler: .
+    image: 8thom/faas-composer
+    fprocess: "bash ./licenses.sh"
+
+  outdated:
+    lang: Dockerfile
+    handler: .
+    image: 8thom/faas-composer
+    fprocess: "bash ./outdated.sh"
     environment:
       read_timeout: 300
       write_timeout: 10
       exec_timeout: 300
+
+  show:
+    lang: Dockerfile
+    handler: .
+    image: 8thom/faas-composer
+    fprocess: "bash ./show.sh"
+
+  suggests:
+    lang: Dockerfile
+    handler: .
+    image: 8thom/faas-composer
+    fprocess: "bash ./suggests.sh"
+
+  update:
+    lang: Dockerfile
+    handler: .
+    image: 8thom/faas-composer
+    fprocess: "bash ./update.sh"
+    environment:
+      read_timeout: 300
+      write_timeout: 10
+      exec_timeout: 300
+
+  validate:
+    lang: Dockerfile
+    handler: .
+    image: 8thom/faas-composer
+    fprocess: "bash ./validate.sh"
+
+  version:
+    lang: Dockerfile
+    handler: .
+    image: 8thom/faas-composer
+    fprocess: "composer --version"

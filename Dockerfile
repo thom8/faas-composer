@@ -3,16 +3,16 @@ ENTRYPOINT []
 
 RUN composer global require hirak/prestissimo
 
-ADD https://github.com/alexellis/faas/releases/download/0.6.5/fwatchdog /usr/bin
+RUN wget https://github.com/alexellis/faas/releases/download/0.6.5/fwatchdog -O /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
-COPY entry.sh   .
-RUN chmod +x entry.sh
+COPY commands/   .
+RUN chmod +x *.sh
 
 COPY composer.json   .
-RUN cat composer.json | bash entry.sh
+RUN cat composer.json | bash update.sh
 
-ENV fprocess="bash ./entry.sh"
+ENV fprocess="composer about"
 
 HEALTHCHECK --interval=5s CMD [ -e /tmp/.lock ] || exit 1
 CMD ["fwatchdog"]
